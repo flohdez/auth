@@ -36,6 +36,8 @@ abstract class AbstractRule implements Rule
      * @var array default config
      */
     protected $_defaultConfig = [];
+    public $Posts = null;
+    public $NoDefaultTable = null;
 
     /**
      * AbstractRule constructor.
