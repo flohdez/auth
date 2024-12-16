@@ -60,9 +60,6 @@ jobs:
         if: matrix.php-version == '8.1' && matrix.db-type == 'mysql'
         run: echo "::add-matcher::${{ runner.tool_cache }}/phpunit.json"
 
-      - name: Add a delay
-        run: sleep 10
-
       - name: Run PHPUnit
         run: |
           if [[ ${{ matrix.db-type }} == 'sqlite' ]]; then export DB_URL='sqlite:///:memory:'; fi
